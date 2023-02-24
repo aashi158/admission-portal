@@ -4,7 +4,7 @@ const connectdb = require('./database/connectdb');
 const cookieParser = require('cookie-parser')
 const app = express()   // FUNCTION CREATE
 app.use(cookieParser())    
-const port = 4500
+const port = process.env.PORT || 4500 
 
 var session = require('express-session');
 var flash = require('connect-flash');
