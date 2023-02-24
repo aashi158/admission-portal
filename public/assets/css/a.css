@@ -1,0 +1,12 @@
+.navbar-brand{
+     font-family: 'Gwendolyn', cursive;
+    margin-left: 40px;
+    color: wheat;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 15px;
+}
+.banner{
+    background-image: url(/public/assets/image/homepage.jpg);
+    height: 300px;
+}

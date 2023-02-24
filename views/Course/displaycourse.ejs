@@ -1,0 +1,57 @@
+<%- include('../header.ejs') %>
+
+<section class="dashboard-wrap mtb-40">
+     <div class="container">
+         <div class="body-content">
+             <div class="row">
+                 <div class="col-md-3">
+                     <div class="dash-left">
+                         
+                     </div>   
+                 </div>
+                 <div class="col-md-9">
+                     <div class="dash-right">
+                         <div class="dash-header">
+                             <div class="dash-title">
+                             <h1 class="text-center text-danger"><span class="text-danger"></span>DISPLAY DATA</h1>
+                             </div>
+                            
+                         </div>
+                         <table class="table table-bordered table-striped">
+                             <tr>
+                                 <th>S.No.</th>
+                               
+                                 <th>Name</th>
+                                 <!-- <th>College</th> -->
+                                 <th>Course</th>
+                                 
+                                 <th>Action</th>
+                                
+                             </tr>
+                             <% var i=1 %>
+                             <% data.forEach((item)=>{ %>
+                         
+                                 <tr>
+                                     <td><%= i++ %></td>
+                                    
+                                     <td><%= item.name %></td>
+                                     <!-- <td><%= item.college %></td> -->
+                                     <td><%= item.course %></td>
+                                  
+                                   
+                                     <td>
+                                         <a href="/user/viewcourse/<%= item._id %>" class="btn btn-info">VIEW</a>
+                                         <a href="/user/editcourse/<%= item._id %>" class="btn btn-success">EDIT</a>
+                                        
+                                     </td>
+                                 </tr>
+                             
+                              <% }) %>
+                         </table>
+                     </div>   
+                 </div>
+             </div>
+         </div>
+     </div>
+   </section>
+<%- include('../footer.ejs') %>
